@@ -41,9 +41,7 @@ public partial class MegaCastingContext : DbContext
 
             entity.ToTable("Adresse");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CodePostal)
                 .HasMaxLength(5)
                 .IsUnicode(false)
@@ -64,9 +62,7 @@ public partial class MegaCastingContext : DbContext
 
             entity.ToTable("Artiste");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Age).HasColumnName("age");
             entity.Property(e => e.MetierId).HasColumnName("metier_id");
             entity.Property(e => e.Nom)
@@ -90,22 +86,26 @@ public partial class MegaCastingContext : DbContext
 
             entity.ToTable("Casting");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.AdresseId).HasColumnName("adresse_id");
-            entity.Property(e => e.Date)
+            entity.Property(e => e.DatePublication)
                 .HasColumnType("date")
-                .HasColumnName("date");
+                .HasColumnName("date_publication");
             entity.Property(e => e.DiffuseurId).HasColumnName("diffuseur_id");
-            entity.Property(e => e.Libelle)
+            entity.Property(e => e.DomaineMetier).HasColumnName("domaine_metier");
+            entity.Property(e => e.IntituleCasting)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("libelle");
-            entity.Property(e => e.Type)
+                .HasColumnName("intitule_casting");
+            entity.Property(e => e.LibelleCasting)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("type");
+                .HasColumnName("libelle_casting");
+            entity.Property(e => e.TypeCasting)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("type_casting");
+            entity.Property(e => e.TypeContrat).HasColumnName("type_contrat");
 
             entity.HasOne(d => d.Adresse).WithMany(p => p.Castings)
                 .HasForeignKey(d => d.AdresseId)
@@ -116,6 +116,16 @@ public partial class MegaCastingContext : DbContext
                 .HasForeignKey(d => d.DiffuseurId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Casting__diffuse__4BAC3F29");
+
+            entity.HasOne(d => d.DomaineMetierNavigation).WithMany(p => p.Castings)
+                .HasForeignKey(d => d.DomaineMetier)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Casting__domaine__68487DD7");
+
+            entity.HasOne(d => d.TypeContratNavigation).WithMany(p => p.Castings)
+                .HasForeignKey(d => d.TypeContrat)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Casting__type_co__693CA210");
         });
 
         modelBuilder.Entity<Contrat>(entity =>
@@ -124,19 +134,22 @@ public partial class MegaCastingContext : DbContext
 
             entity.ToTable("Contrat");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.DateDebut)
                 .HasColumnType("date")
                 .HasColumnName("date_debut");
             entity.Property(e => e.DateFin)
                 .HasColumnType("date")
                 .HasColumnName("date_fin");
-            entity.Property(e => e.Libelle)
+            entity.Property(e => e.LibelleContrat)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("libelle");
+                .HasColumnName("libelle_contrat");
+            entity.Property(e => e.PartenaireId).HasColumnName("partenaire_id");
+
+            entity.HasOne(d => d.Partenaire).WithMany(p => p.Contrats)
+                .HasForeignKey(d => d.PartenaireId)
+                .HasConstraintName("FK__Contrat__partena__6C190EBB");
         });
 
         modelBuilder.Entity<Diffuseur>(entity =>
@@ -145,13 +158,11 @@ public partial class MegaCastingContext : DbContext
 
             entity.ToTable("Diffuseur");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
-            entity.Property(e => e.Libelle)
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.LibelleDiffuseur)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("libelle");
+                .HasColumnName("libelle_diffuseur");
         });
 
         modelBuilder.Entity<Metier>(entity =>
@@ -161,10 +172,10 @@ public partial class MegaCastingContext : DbContext
             entity.ToTable("Metier");
 
             entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.Libelle)
+            entity.Property(e => e.LibelleMetier)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("libelle");
+                .HasColumnName("libelle_metier");
         });
 
         modelBuilder.Entity<Partenaire>(entity =>
@@ -173,13 +184,11 @@ public partial class MegaCastingContext : DbContext
 
             entity.ToTable("Partenaire");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
-            entity.Property(e => e.Libelle)
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.LibellePartenaire)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("libelle");
+                .HasColumnName("libelle_partenaire");
         });
 
         OnModelCreatingPartial(modelBuilder);

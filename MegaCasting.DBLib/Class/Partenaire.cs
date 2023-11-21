@@ -7,5 +7,7 @@ public partial class Partenaire
 {
     public int Id { get; set; }
 
-    public string? Libelle { get; set; }
+    public string? LibellePartenaire { get; set; }
+
+    public virtual ICollection<Contrat> Contrats { get; set; } = new List<Contrat>();
 }

@@ -7,7 +7,7 @@ public partial class Diffuseur
 {
     public int Id { get; set; }
 
-    public string? Libelle { get; set; }
+    public string? LibelleDiffuseur { get; set; }
 
     public virtual ICollection<Casting> Castings { get; set; } = new List<Casting>();
 }
