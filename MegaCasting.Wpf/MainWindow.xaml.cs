@@ -1,4 +1,5 @@
 ﻿using MegaCasting.DBLib.Class;
+using MegaCasting.Wpf.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,12 @@ namespace MegaCasting.Wpf
             {
                 var test = mg.Diffuseurs.ToList().First();
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Doc.Children.Clear();
+            this.Doc.Children.Add(new DiffuseurView());
         }
     }
 }

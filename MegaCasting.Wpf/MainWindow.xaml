@@ -3,33 +3,83 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MegaCasting.Wpf"
+        xmlns:local="clr-namespace:MegaCasting.Wpf" 
+        xmlns:view="clr-namespace:MegaCasting.Wpf.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
-				ResizeMode="NoResize"
-				Background="Transparent"
-                AllowsTransparency="False"
-                WindowStyle="SingleBorderWindow"
-				>
-    <Border Background="#002855" CornerRadius="15">
+        Title="MainWindow" 
+        Height="600" Width="920"
+		ResizeMode="NoResize"
+		Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None">
+
+    <Border Background="#272537"
+            CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Elysian"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Foreground="White"
+                       FontSize="22"
+                       Margin="20,0,0,0"/>
+
+            <StackPanel Grid.Row="1">
+                <Button Content="Offre"
+                             Foreground="White"
+                             FontSize="14"
+                             Height="50"
+                        Click="Button_Click"
+                        />
+                
+                <Button Content="Offre"
+                              Foreground="White"
+                              FontSize="14"
+                              Height="50"/>
+
+                <Button Content="Offre"
+                              Foreground="White"
+                              FontSize="14"
+                              Height="50"/>
+            </StackPanel>
+
+            <DockPanel x:Name="Doc" Grid.Column="1" Grid.Row="1">
+                <view:AccueilView/>
+            </DockPanel>
+
+        </Grid>
+        
+    </Border>
+    <!--<Border Background="#284B63" CornerRadius="15">
         <Grid ShowGridLines="True">
+            
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200" />
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
+            
             <TextBlock Grid.Row="0" Grid.Column="0" Text="MegaCasting"
                        Foreground="GhostWhite" 
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontSize="20"
-                       
-                       />
+             />
 
             <StackPanel Grid.Row="1" Grid.Column="0">
                 <Button Style="{StaticResource ButtonMenu}" Content="Offres"/>
@@ -38,5 +88,5 @@
             </StackPanel>
 
         </Grid>
-    </Border>
+    </Border>-->
 </Window>

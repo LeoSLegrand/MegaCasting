@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\App.xaml
-2-96019324
+51218287300
 
-3-1233169557
-2271066285640
-MainWindow.xaml;Styles\Styles.xaml;
+71071263475
+2282109011587
+MainWindow.xaml;Theme\MenuBtnTheme.xaml;Theme\TextBoxTheme.xaml;View\AccueilView.xaml;View\DiffuseurView.xaml;
 
 False
 
