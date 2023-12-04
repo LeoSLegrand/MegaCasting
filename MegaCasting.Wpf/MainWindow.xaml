@@ -7,13 +7,13 @@
         xmlns:view="clr-namespace:MegaCasting.Wpf.View"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="600" Width="920"
+        Height="601" Width="920"
 		ResizeMode="NoResize"
 		Background="Transparent"
         AllowsTransparency="True"
         WindowStyle="None">
 
-    <Border Background="#272537"
+    <Border Background="#A0B9BF"
             CornerRadius="20">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -26,7 +26,7 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Elysian"
+            <TextBlock Text="Main Page"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
                        Foreground="White"
@@ -34,22 +34,41 @@
                        Margin="20,0,0,0"/>
 
             <StackPanel Grid.Row="1">
-                <Button Content="Offre"
-                             Foreground="White"
+                <Button Content="Liste Diffuseur"
+                             Foreground="Black"
                              FontSize="14"
                              Height="50"
-                        Click="Button_Click"
-                        />
+                        Click="Button_Click"/>
                 
-                <Button Content="Offre"
-                              Foreground="White"
+                <Button Content="Ajouter Diffuseur"
+                              Foreground="Black"
+                              FontSize="14"
+                              Height="50"
+                              />
+                
+
+                <Button Content="Liste Artiste"
+                              Foreground="Black"
                               FontSize="14"
                               Height="50"/>
 
-                <Button Content="Offre"
-                              Foreground="White"
+                <Button Content="Ajouter Artiste"
+                              Foreground="Black"
+                              FontSize="14"
+                              Height="50"
+                              Click="Button_Click_1"/>
+
+                <Button Content="Liste Offre Casting"
+                              Foreground="Black"
                               FontSize="14"
                               Height="50"/>
+
+
+                <Button Content="Ajouter offre Casting"
+                              Foreground="Black"
+                              FontSize="14"
+                              Height="50"
+                              Click="Button_Click_3"/>
             </StackPanel>
 
             <DockPanel x:Name="Doc" Grid.Column="1" Grid.Row="1">

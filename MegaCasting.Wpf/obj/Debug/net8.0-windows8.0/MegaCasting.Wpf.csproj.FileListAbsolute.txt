@@ -70,3 +70,7 @@ C:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\obj\Debug\net8.0-windows
 C:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\obj\Debug\net8.0-windows8.0\GeneratedInternalTypeHelper.g.cs
 C:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\bin\Debug\net8.0-windows8.0\MegaCasting.Core.dll
 C:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\bin\Debug\net8.0-windows8.0\MegaCasting.Core.pdb
+C:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\obj\Debug\net8.0-windows8.0\View\ArtisteView.g.cs
+C:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\obj\Debug\net8.0-windows8.0\View\ArtisteView.baml
+C:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\obj\Debug\net8.0-windows8.0\View\OffreCastingView.g.cs
+C:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\obj\Debug\net8.0-windows8.0\View\OffreCastingView.baml

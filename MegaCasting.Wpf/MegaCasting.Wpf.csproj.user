@@ -5,7 +5,13 @@
     <Compile Update="View\AccueilView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\ArtisteView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\DiffuseurView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\OffreCastingView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -19,7 +25,13 @@
     <Page Update="View\AccueilView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\ArtisteView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\DiffuseurView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\OffreCastingView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
