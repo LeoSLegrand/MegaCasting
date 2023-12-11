@@ -27,7 +27,7 @@ namespace MegaCasting.Wpf
             
             using (MegaCastingContext mg = new())
             {
-                var test = mg.Diffuseurs.ToList().First();
+                var test = mg.Diffuseurs.ToList().FirstOrDefault();
             }
         }
 

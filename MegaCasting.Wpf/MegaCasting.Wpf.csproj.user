@@ -22,6 +22,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Styles\Styles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Theme\MenuBtnTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
