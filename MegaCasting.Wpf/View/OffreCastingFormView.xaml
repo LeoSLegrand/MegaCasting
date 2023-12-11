@@ -14,10 +14,10 @@
         <TextBox x:Name="gender" HorizontalAlignment="Left" Margin="113,-80,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
         <TextBox x:Name="city" HorizontalAlignment="Left" Margin="113,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
-        <Label Content="Adresse" HorizontalAlignment="Left" Margin="52,257,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.135,0.579"/>
-        <Label Content="Libelle Casting" HorizontalAlignment="Left" Margin="60,-80,0,0" VerticalAlignment="Center"/>
-        <Label Content="Type Casting" HorizontalAlignment="Left" Margin="50,155,0,0" VerticalAlignment="Top"/>
-        <Label Content="Date Publication" HorizontalAlignment="Left" Margin="66,101,0,0" VerticalAlignment="Top" Height="31" RenderTransformOrigin="0.951,0.614"/>
+        <Label Content="Adresse" HorizontalAlignment="Left" Margin="60,257,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.135,0.579"/>
+        <Label Content="Libelle Casting" HorizontalAlignment="Left" Margin="25,-80,0,0" VerticalAlignment="Center"/>
+        <Label Content="Type Casting" HorizontalAlignment="Left" Margin="35,155,0,0" VerticalAlignment="Top"/>
+        <Label Content="Date Publication" HorizontalAlignment="Left" Margin="15,101,0,0" VerticalAlignment="Top" Height="31" RenderTransformOrigin="0.951,0.614"/>
 
         <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="322,70,38,200"/>
 

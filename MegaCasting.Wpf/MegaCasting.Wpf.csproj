@@ -36,7 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="View\ArtisteListView.xaml.cs">
+    <Compile Update="View\ArtisteListeView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

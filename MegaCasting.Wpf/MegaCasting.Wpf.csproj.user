@@ -5,13 +5,19 @@
     <Compile Update="View\AccueilView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\ArtisteView.xaml.cs">
+    <Compile Update="View\ArtisteFormView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\DiffuseurView.xaml.cs">
+    <Compile Update="View\DiffuseurFormView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\OffreCastingView.xaml.cs">
+    <Compile Update="View\DiffuseurListeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\OffreCastingFormView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\OffreCastingListe.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -25,16 +31,22 @@
     <Page Update="View\AccueilView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\ArtisteListView.xaml">
+    <Page Update="View\ArtisteListeView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\ArtisteView.xaml">
+    <Page Update="View\ArtisteFormView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\DiffuseurView.xaml">
+    <Page Update="View\DiffuseurFormView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\OffreCastingView.xaml">
+    <Page Update="View\DiffuseurListeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\OffreCastingFormView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\OffreCastingListe.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

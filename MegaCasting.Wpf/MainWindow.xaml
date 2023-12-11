@@ -44,7 +44,7 @@
                               Foreground="Black"
                               FontSize="14"
                               Height="50"
-                              />
+                              Click="Button_Click_4"/>
                 
 
                 <Button Content="Liste Artiste"
@@ -62,7 +62,8 @@
                 <Button Content="Liste Offre Casting"
                               Foreground="Black"
                               FontSize="14"
-                              Height="50"/>
+                              Height="50"
+                              Click="Button_Click_5"/>
 
 
                 <Button Content="Ajouter offre Casting"
