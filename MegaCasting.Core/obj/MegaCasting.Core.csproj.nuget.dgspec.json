@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj": {}
+    "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj": {
+    "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj",
+        "projectUniqueName": "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj",
         "projectName": "MegaCasting.Core",
-        "projectPath": "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj",
-        "packagesPath": "C:\\Users\\leose\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.Core\\obj\\",
+        "projectPath": "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj",
+        "packagesPath": "C:\\Users\\stefk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\stefk\\Source\\Repos\\MegaCasting\\MegaCasting.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\leose\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\stefk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

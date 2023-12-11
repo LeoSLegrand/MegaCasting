@@ -5,10 +5,10 @@
              StartupUri="MainWindow.xaml">
 	<Application.Resources>
 		<ResourceDictionary>
-			<ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary.MergedDictionaries>
                 <!--<ResourceDictionary Source="Theme/MenuBtnTheme.xaml" ></ResourceDictionary>
                 <ResourceDictionary Source="Theme/TextBoxTheme.xaml" ></ResourceDictionary>-->
-			</ResourceDictionary.MergedDictionaries>
-		</ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
 	</Application.Resources>
 </Application>

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.Wpf\\MegaCasting.Wpf.csproj": {}
+    "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.Wpf\\MegaCasting.Wpf.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj": {
+    "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj",
+        "projectUniqueName": "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj",
         "projectName": "MegaCasting.Core",
-        "projectPath": "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj",
-        "packagesPath": "C:\\Users\\leose\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.Core\\obj\\",
+        "projectPath": "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj",
+        "packagesPath": "C:\\Users\\stefk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\stefk\\Source\\Repos\\MegaCasting\\MegaCasting.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\leose\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\stefk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,17 +59,17 @@
         }
       }
     },
-    "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.DBLib\\MegaCasting.DBLib.csproj": {
+    "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.DBLib\\MegaCasting.DBLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.DBLib\\MegaCasting.DBLib.csproj",
+        "projectUniqueName": "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.DBLib\\MegaCasting.DBLib.csproj",
         "projectName": "MegaCasting.DBLib",
-        "projectPath": "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.DBLib\\MegaCasting.DBLib.csproj",
-        "packagesPath": "C:\\Users\\leose\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.DBLib\\obj\\",
+        "projectPath": "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.DBLib\\MegaCasting.DBLib.csproj",
+        "packagesPath": "C:\\Users\\stefk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\stefk\\Source\\Repos\\MegaCasting\\MegaCasting.DBLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\leose\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\stefk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -134,17 +134,17 @@
         }
       }
     },
-    "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.Wpf\\MegaCasting.Wpf.csproj": {
+    "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.Wpf\\MegaCasting.Wpf.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.Wpf\\MegaCasting.Wpf.csproj",
+        "projectUniqueName": "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.Wpf\\MegaCasting.Wpf.csproj",
         "projectName": "MegaCasting.Wpf",
-        "projectPath": "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.Wpf\\MegaCasting.Wpf.csproj",
-        "packagesPath": "C:\\Users\\leose\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.Wpf\\obj\\",
+        "projectPath": "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.Wpf\\MegaCasting.Wpf.csproj",
+        "packagesPath": "C:\\Users\\stefk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.Wpf\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\leose\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\stefk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -158,11 +158,11 @@
           "net8.0-windows8.0": {
             "targetAlias": "net8.0-windows8.0",
             "projectReferences": {
-              "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj": {
-                "projectPath": "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj"
+              "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj": {
+                "projectPath": "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.Core\\MegaCasting.Core.csproj"
               },
-              "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.DBLib\\MegaCasting.DBLib.csproj": {
-                "projectPath": "C:\\Users\\leose\\source\\repos\\MegaCasting\\MegaCasting.DBLib\\MegaCasting.DBLib.csproj"
+              "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.DBLib\\MegaCasting.DBLib.csproj": {
+                "projectPath": "C:\\Users\\stefk\\source\\repos\\MegaCasting\\MegaCasting.DBLib\\MegaCasting.DBLib.csproj"
               }
             }
           }
