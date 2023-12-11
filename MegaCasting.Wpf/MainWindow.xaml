@@ -50,7 +50,8 @@
                 <Button Content="Liste Artiste"
                               Foreground="Black"
                               FontSize="14"
-                              Height="50"/>
+                              Height="50"
+                              Click="Button_Click_2"/>
 
                 <Button Content="Ajouter Artiste"
                               Foreground="Black"

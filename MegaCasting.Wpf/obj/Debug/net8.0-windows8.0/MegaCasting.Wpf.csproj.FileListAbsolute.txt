@@ -74,3 +74,5 @@ C:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\obj\Debug\net8.0-windows
 C:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\obj\Debug\net8.0-windows8.0\View\ArtisteView.baml
 C:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\obj\Debug\net8.0-windows8.0\View\OffreCastingView.g.cs
 C:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\obj\Debug\net8.0-windows8.0\View\OffreCastingView.baml
+C:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\obj\Debug\net8.0-windows8.0\View\ArtisteListView.g.cs
+C:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\obj\Debug\net8.0-windows8.0\View\ArtisteListView.baml

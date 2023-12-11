@@ -25,6 +25,9 @@
     <Page Update="View\AccueilView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\ArtisteListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\ArtisteView.xaml">
       <SubType>Designer</SubType>
     </Page>

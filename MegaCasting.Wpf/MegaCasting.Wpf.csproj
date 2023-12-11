@@ -35,4 +35,10 @@
     <Folder Include="Model\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="View\ArtisteListView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>
