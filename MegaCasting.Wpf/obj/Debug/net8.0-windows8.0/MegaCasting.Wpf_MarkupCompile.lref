@@ -2,8 +2,10 @@
 FC:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\App.xaml;;
 FC:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\MainWindow.xaml;;
 FC:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\View\AccueilView.xaml;;
-FC:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\View\ArtisteListView.xaml;;
-FC:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\View\ArtisteView.xaml;;
-FC:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\View\DiffuseurView.xaml;;
-FC:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\View\OffreCastingView.xaml;;
+FC:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\View\DiffuseurListeView.xaml;;
+FC:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\View\ArtisteListeView.xaml;;
+FC:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\View\ArtisteFormView.xaml;;
+FC:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\View\OffreCastingFormView.xaml;;
+FC:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\View\DiffuseurFormView.xaml;;
+FC:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\View\OffreCastingListe.xaml;;
 
