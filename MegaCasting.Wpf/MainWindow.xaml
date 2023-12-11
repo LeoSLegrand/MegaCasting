@@ -34,18 +34,13 @@
                        Margin="20,0,0,0"/>
 
             <StackPanel Grid.Row="1">
-                <Button Content="Liste Diffuseur"
-                             Foreground="Black"
-                             FontSize="14"
-                             Height="50"
-                        Click="Button_Click"/>
-                
+                <!--<Button Content="Liste Diffuseur" Style="{StaticResource RoundedButtonStyle}" Click="Button_Click"/>-->
+
                 <Button Content="Ajouter Diffuseur"
                               Foreground="Black"
                               FontSize="14"
                               Height="50"
                               Click="Button_Click_4"/>
-                
 
                 <Button Content="Liste Artiste"
                               Foreground="Black"

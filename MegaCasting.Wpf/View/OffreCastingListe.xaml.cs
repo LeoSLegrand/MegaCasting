@@ -19,7 +19,7 @@ namespace MegaCasting.Wpf.View
     /// <summary>
     /// Interaction logic for OffreCastingListe.xaml
     /// </summary>
-    public partial class OffreCastingListe : Page
+    public partial class OffreCastingListe : UserControl
     {
         public OffreCastingListe()
         {
