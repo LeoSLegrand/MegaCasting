@@ -1,8 +1,7 @@
 ﻿using MegaCasting.Wpf.ViewModel;
-using Microsoft.Data.SqlClient;
+using MegaCasting.Wpf.View;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,29 +17,21 @@ using System.Windows.Shapes;
 
 namespace MegaCasting.Wpf.View
 {
-    /// <summary>
-    /// Interaction logic for ArtisteView.xaml
-    /// </summary>
-    public partial class ArtisteView : UserControl
+    public partial class LoginView : UserControl
     {
-        public ArtisteView()
+
+        public LoginView()
         {
             InitializeComponent();
-
+            this.DataContext = new LoginViewViewModel();
         }
 
-        public void clear()
-        {
-            name.Clear();
-            firstname.Clear();
-            age.Clear();
-        }
+        private void PasswordBoxLogin_PasswordChanged(object sender, RoutedEventArgs e)
+            => ((LoginViewViewModel)this.DataContext).Password = ((PasswordBox)sender).Password;
 
-        private void Clear_Click(object sender, RoutedEventArgs e)
-        {
-            clear();
-        }
+        private void ConnectButton_Click(object sender, RoutedEventArgs e)
+            => ((LoginViewViewModel)this.DataContext).Authenticate();
 
-      
     }
+
 }

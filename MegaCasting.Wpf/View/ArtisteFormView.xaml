@@ -17,7 +17,7 @@
         <Label Content="Prenom" HorizontalAlignment="Left" Margin="50,155,0,0" VerticalAlignment="Top"/>
         <Label Content="Age" HorizontalAlignment="Left" Margin="60,-80,0,0" VerticalAlignment="Center"/>
 
-        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="322,70,38,200"/>
+        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="322,70,38,200" SelectionChanged="datagrid_SelectionChanged"/>
 
         <Button x:Name="Incert" Content="Incert" HorizontalAlignment="Left" Margin="100,347,0,0" VerticalAlignment="Top" Height="52" Width="133" FontWeight="Bold" FontSize="14"/>
         <Button x:Name="Update" Content="Update" HorizontalAlignment="Left" Margin="250,347,0,0" VerticalAlignment="Top" Height="52" Width="133" FontWeight="Bold" FontSize="14"/>

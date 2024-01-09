@@ -14,6 +14,12 @@
     <Compile Update="View\DiffuseurListeView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\LoginView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\MainView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\OffreCastingFormView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,12 +28,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Theme\MenuBtnTheme.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Theme\TextBoxTheme.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="View\AccueilView.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -41,6 +41,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\DiffuseurListeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\LoginView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MainView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\OffreCastingFormView.xaml">

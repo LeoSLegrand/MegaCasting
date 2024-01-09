@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="MegaCasting.Wpf.View.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MegaCasting.Wpf" 
+        xmlns:view="clr-namespace:MegaCasting.Wpf.View"
+        mc:Ignorable="d">
+
+    <Border Background="#A0B9BF"
+            CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Page d'Aceuil"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Foreground="White"
+                       FontSize="22"
+                       Margin="20,0,0,0"/>
+
+            <StackPanel Grid.Row="1">
+                <Button Content="Liste Diffuseur"
+                             Foreground="Black"
+                             FontSize="14"
+                             Height="50"
+                        Click="Button_Click"/>
+
+                <Button Content="Ajouter Diffuseur"
+                              Foreground="Black"
+                              FontSize="14"
+                              Height="50"
+                              Click="Button_Click_4"/>
+
+
+                <Button Content="Liste Artiste"
+                              Foreground="Black"
+                              FontSize="14"
+                              Height="50"
+                              Click="Button_Click_2"/>
+
+                <Button Content="Ajouter Artiste"
+                              Foreground="Black"
+                              FontSize="14"
+                              Height="50"
+                              Click="Button_Click_1"/>
+
+                <Button Content="Liste Offre Casting"
+                              Foreground="Black"
+                              FontSize="14"
+                              Height="50"
+                              Click="Button_Click_5"/>
+
+
+                <Button Content="Ajouter offre Casting"
+                              Foreground="Black"
+                              FontSize="14"
+                              Height="50"
+                              Click="Button_Click_3"/>
+            </StackPanel>
+
+            <DockPanel x:Name="Doc" Grid.Column="1" Grid.Row="1">
+                <view:AccueilView/>
+            </DockPanel>
+
+        </Grid>
+
+    </Border>
+
+</UserControl>
