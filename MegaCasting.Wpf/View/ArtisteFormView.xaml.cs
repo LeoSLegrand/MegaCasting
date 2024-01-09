@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,14 +31,14 @@ namespace MegaCasting.Wpf.View
         public void clear()
         {
             name.Clear();
+            firstname.Clear();
             age.Clear();
-            gender.Clear();
-            city.Clear();
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
             clear();
         }
+
     }
 }
