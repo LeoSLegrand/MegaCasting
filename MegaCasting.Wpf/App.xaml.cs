@@ -6,82 +6,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-using Microsoft.AspNet.Identity;
-using Microsoft.EntityFrameworkCore;
-using MegaCasting.DBLib.Class;
-
-namespace MegaCasting.Wpf;
-public partial class App : Application
+namespace MegaCasting.Wpf
 {
-
-    #region Fields
-
-    private bool _IsLoggedIn;
-
-
-    #endregion
-
-    #region Properties
-
-    public bool IsLoggedIn { get => _IsLoggedIn; set => _IsLoggedIn = value; }
-
-    #endregion
-
-    #region Constructors
-
-
     /// <summary>
-    /// Surcharge de l'instanciation de l'App.
-    /// On s'en sert pour détruire et recréé la base de données.
+    /// Interaction logic for App.xaml
     /// </summary>
-    public App() : base()
+    public partial class App : Application
     {
-        using (MegaCastingContext context = new())
-        {
-            // On supprime la base de données
-            context.Database.EnsureDeleted();
-
-            // Puis on la recréé.
-            context.Database.EnsureCreated();
-
-            // Ajout des utilisateurs de tests.
-            AddMockupUsers();
-        }
     }
-
-
-
-    #endregion
-
-    #region Methods
-
-    #region Mockups datas
-
-    /// <summary>
-    /// Génère des utilisateurs de test.
-    /// </summary>
-    private void AddMockupUsers()
-    {
-
-        // Outil de hashage
-        PasswordHasher hasher = new PasswordHasher();
-
-        User userTest = new User()
-        {
-            UserName = "Test",
-            HashedPassword = hasher.HashPassword("test"),
-        };
-
-        using (MegaCastingContext context = new())
-        {
-            // On supprime la base de données
-            context.Users.Add(userTest);
-            context.SaveChanges();
-        }
-    }
-
-    #endregion
-
-    #endregion
-
 }

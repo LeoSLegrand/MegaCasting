@@ -3,12 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:MegaCasting.Wpf"
              StartupUri="MainWindow.xaml">
-	<Application.Resources>
-		<ResourceDictionary>
-			<ResourceDictionary.MergedDictionaries>
+    <Application.Resources>
                 <!--<ResourceDictionary Source="Theme/MenuBtnTheme.xaml" ></ResourceDictionary>
                 <ResourceDictionary Source="Theme/TextBoxTheme.xaml" ></ResourceDictionary>-->
-			</ResourceDictionary.MergedDictionaries>
-		</ResourceDictionary>
-	</Application.Resources>
+                <!--<ResourceDictionary Source="./Styles/Styles.xaml"/>-->
+
+    </Application.Resources>
 </Application>

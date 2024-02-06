@@ -10,18 +10,22 @@
   <ItemGroup>
     <Compile Remove="Converters\**" />
     <Compile Remove="Models\**" />
+    <Compile Remove="Model\**" />
     <Compile Remove="ViewModels\**" />
     <Compile Remove="Views\**" />
     <EmbeddedResource Remove="Converters\**" />
     <EmbeddedResource Remove="Models\**" />
+    <EmbeddedResource Remove="Model\**" />
     <EmbeddedResource Remove="ViewModels\**" />
     <EmbeddedResource Remove="Views\**" />
     <None Remove="Converters\**" />
     <None Remove="Models\**" />
+    <None Remove="Model\**" />
     <None Remove="ViewModels\**" />
     <None Remove="Views\**" />
     <Page Remove="Converters\**" />
     <Page Remove="Models\**" />
+    <Page Remove="Model\**" />
     <Page Remove="ViewModels\**" />
     <Page Remove="Views\**" />
   </ItemGroup>
@@ -29,18 +33,6 @@
   <ItemGroup>
     <ProjectReference Include="..\MegaCasting.Core\MegaCasting.Core.csproj" />
     <ProjectReference Include="..\MegaCasting.DBLib\MegaCasting.DBLib.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Gu.Wpf.Adorners" Version="2.1.1" />
-    <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.12" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.12" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.12">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>

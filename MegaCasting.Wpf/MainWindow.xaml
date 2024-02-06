@@ -6,13 +6,103 @@
         xmlns:local="clr-namespace:MegaCasting.Wpf" 
         xmlns:view="clr-namespace:MegaCasting.Wpf.View"
         mc:Ignorable="d"
-        Title="MainWindow"
+        Title="MainWindow" 
         Height="601" Width="920"
+		ResizeMode="NoResize"
+		Background="Transparent"
         AllowsTransparency="True"
         WindowStyle="None">
 
-        <Grid x:Name="MainView">
-        <view:MainView/>
-        <view:LoginView/>
-    </Grid>
+    <Border Background="#A0B9BF"
+            CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Main Page"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Foreground="White"
+                       FontSize="22"
+                       Margin="20,0,0,0"/>
+
+            <StackPanel Grid.Row="1">
+                <!--<Button Content="Liste Diffuseur" Style="{StaticResource RoundedButtonStyle}" Click="Button_Click"/>-->
+
+                <Button Content="Ajouter Diffuseur"
+                              Foreground="Black"
+                              FontSize="14"
+                              Height="50"
+                              Click="Button_Click_4"/>
+
+                <Button Content="Liste Artiste"
+                              Foreground="Black"
+                              FontSize="14"
+                              Height="50"
+                              Click="Button_Click_2"/>
+
+                <Button Content="Ajouter Artiste"
+                              Foreground="Black"
+                              FontSize="14"
+                              Height="50"
+                              Click="Button_Click_1"/>
+
+                <Button Content="Liste Offre Casting"
+                              Foreground="Black"
+                              FontSize="14"
+                              Height="50"
+                              Click="Button_Click_5"/>
+
+
+                <Button Content="Ajouter offre Casting"
+                              Foreground="Black"
+                              FontSize="14"
+                              Height="50"
+                              Click="Button_Click_3"/>
+            </StackPanel>
+
+            <DockPanel x:Name="Doc" Grid.Column="1" Grid.Row="1">
+                <view:AccueilView/>
+            </DockPanel>
+
+        </Grid>
+        
+    </Border>
+    <!--<Border Background="#284B63" CornerRadius="15">
+        <Grid ShowGridLines="True">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="MegaCasting"
+                       Foreground="GhostWhite" 
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontSize="20"
+             />
+
+            <StackPanel Grid.Row="1" Grid.Column="0">
+                <Button Style="{StaticResource ButtonMenu}" Content="Offres"/>
+                <Button Style="{StaticResource ButtonMenu}" Content="Administration"/>
+                <Button Style="{StaticResource ButtonMenu}" Content="Partenaires"/>
+            </StackPanel>
+
+        </Grid>
+    </Border>-->
 </Window>

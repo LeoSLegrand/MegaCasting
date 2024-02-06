@@ -25,17 +25,9 @@ namespace MegaCasting.Wpf.View
             InitializeComponent();
         }
 
-        public void clear()
-        {
-            name.Clear();
-            age.Clear();
-            gender.Clear();
-            city.Clear();
-        }
-
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
-            clear();
+            
         }
     }
 }

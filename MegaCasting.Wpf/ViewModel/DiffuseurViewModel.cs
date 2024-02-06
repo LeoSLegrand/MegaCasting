@@ -8,6 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Microsoft.EntityFrameworkCore;
+using System.Windows;
+using System.Windows.Data;
+
+
+
+
 namespace MegaCasting.Wpf.ViewModel
 {
     class DiffuseurViewModel : ObservableObject
@@ -29,7 +36,13 @@ namespace MegaCasting.Wpf.ViewModel
                 Diffuseurs = new ObservableCollection<Diffuseur>(mg.Diffuseurs.ToList());
             }
 
-            
+
+        }
+
+        public void Refresh()
+        {
+
         }
     }
+
 }

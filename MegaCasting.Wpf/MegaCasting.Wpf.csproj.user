@@ -14,12 +14,6 @@
     <Compile Update="View\DiffuseurListeView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\LoginView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\MainView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\OffreCastingFormView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -41,12 +35,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\DiffuseurListeView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\LoginView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\MainView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\OffreCastingFormView.xaml">
