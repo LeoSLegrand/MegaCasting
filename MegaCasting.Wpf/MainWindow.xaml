@@ -66,6 +66,13 @@
                               FontSize="14"
                               Height="50"
                               Click="Button_Click_3"/>
+
+                <Button         Content="Fermer"
+                                x:Name="CloseButton"
+                              Foreground="Black"
+                              FontSize="14"
+                              Height="50"
+                              Click="CloseButton_Click"/>
             </StackPanel>
 
             <DockPanel x:Name="Doc" Grid.Column="1" Grid.Row="1">
