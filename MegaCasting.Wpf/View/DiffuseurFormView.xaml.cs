@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MegaCasting.Wpf.ViewModel;
 
 namespace MegaCasting.Wpf.View
 {
@@ -36,6 +37,12 @@ namespace MegaCasting.Wpf.View
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
             clear();
+        }
+
+        private void AddDiffuseurButton_Click(object sender, RoutedEventArgs e)
+        {
+            DiffuseurFormView? window = new();
+            ((DiffuseurViewModel)this.DataContext).Refresh();
         }
 
     }

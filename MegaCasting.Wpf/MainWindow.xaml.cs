@@ -37,7 +37,12 @@ namespace MegaCasting.Wpf
             this.Doc.Children.Add(new DiffuseurView());
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e) //Ajouter Artiste
+        /// <summary>
+        /// Ajouter Artiste
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.Doc.Children.Clear();
             this.Doc.Children.Add(new ArtisteView());
