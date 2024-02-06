@@ -24,11 +24,7 @@ namespace MegaCasting.Wpf
         public MainWindow()
         {
             InitializeComponent();
-            
-            using (MegaCastingContext mg = new())
-            {
-                var test = mg.Diffuseurs.ToList().FirstOrDefault();
-            }
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) //Liste Diffuseur
@@ -70,6 +66,11 @@ namespace MegaCasting.Wpf
         {
             this.Doc.Children.Clear();
             this.Doc.Children.Add(new OffreCastingListe());
+        }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
