@@ -20,8 +20,6 @@ namespace MegaCasting.Wpf.ViewModel
             set { SetProperty(nameof(Diffuseurs), ref _Diffuseurs, value); }
         }
 
-
-
         public DiffuseurViewModel()
         {
             using (MegaCastingContext mg = new MegaCastingContext())
