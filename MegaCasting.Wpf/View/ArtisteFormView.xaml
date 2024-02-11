@@ -6,24 +6,77 @@
              xmlns:local="clr-namespace:MegaCasting.Wpf.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    
     <Grid>
-        <Label Content="Artistes&#xA;" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" FontSize="16" FontStyle="Italic"/>
-        <Label Content="Adresse" HorizontalAlignment="Left" Margin="52,257,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.135,0.579"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"  />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50px"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
 
-        <TextBox x:Name="name" HorizontalAlignment="Left" Margin="113,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="age" HorizontalAlignment="Left" Margin="113,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="gender" HorizontalAlignment="Left" Margin="113,-80,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
-        <TextBox x:Name="city" HorizontalAlignment="Left" Margin="113,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <GroupBox Grid.Row="1" Grid.Column="1" Header="Ajout d'un artiste">
+            <StackPanel Orientation="Horizontal" >
+                <Label Content="Nom" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="31" />
+                <TextBox  Text="{Binding NewArtisteName}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                
+                <Label Content="Prenom" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="31" />
+                <TextBox  Text="{Binding NewArtistePrenom}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                
+                <Label Content="Age" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="31" />
+                <TextBox  Text="{Binding NewArtisteAge}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
-        <Label Content="Nom" HorizontalAlignment="Left" Margin="60,-80,0,0" VerticalAlignment="Center"/>
-        <Label Content="Prenom" HorizontalAlignment="Left" Margin="50,155,0,0" VerticalAlignment="Top"/>
-        <Label Content="Id" HorizontalAlignment="Left" Margin="66,101,0,0" VerticalAlignment="Top" Height="31" RenderTransformOrigin="0.951,0.614"/>
+                <Label Content="Metier" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" />
+                <ComboBox ItemsSource="{Binding Metiers}" DisplayMemberPath="LibelleMetier" SelectedItem="{Binding SelectedMetier}" Width="120"/>
+            </StackPanel>
+        </GroupBox>
+        
 
-        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="322,70,38,200"/>
 
-        <Button x:Name="Incert" Content="Incert" HorizontalAlignment="Left" Margin="100,347,0,0" VerticalAlignment="Top" Height="52" Width="133" FontWeight="Bold" FontSize="14"/>
-        <Button x:Name="Update" Content="Update" HorizontalAlignment="Left" Margin="250,347,0,0" VerticalAlignment="Top" Height="52" Width="133" FontWeight="Bold" FontSize="14"/>
-        <Button x:Name="Delete" Content="Delete" HorizontalAlignment="Left" Margin="400,347,0,0" VerticalAlignment="Top" Height="52" Width="132" FontWeight="Bold" FontSize="14"/>
-        <Button x:Name="Clear" Content="Clear" HorizontalAlignment="Left" Margin="552,347,0,0" VerticalAlignment="Top" Height="52" Width="133" FontWeight="Bold" FontSize="14" Click="Clear_Click"/>
+        <GroupBox Grid.Row="2" Grid.Column="1" Header="Modification d'un Artiste">
+            <StackPanel Orientation="Horizontal" >
+                <Label Content="Nom" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" />
+                <TextBox   Text="{Binding SelectedArtiste.NomArtiste}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+                <Label Content="Prenom" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" />
+                <TextBox   Text="{Binding SelectedArtiste.AgeArtiste}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+                <Label Content="Age" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" />
+                <TextBox   Text="{Binding SelectedArtiste.GenderArtiste}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+                <Label Content="Metier" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" />
+                <ComboBox ItemsSource="{Binding Metiers}" DisplayMemberPath="LibelleMetier" SelectedItem="{Binding SelectedMetier}" Width="120"/>
+            </StackPanel>
+        </GroupBox>
+
+        <DataGrid 
+            Grid.Row="1" Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Grid.RowSpan="2"
+            AutoGenerateColumns="False"
+            CanUserAddRows="False"
+            SelectedItem="{Binding SelectedArtiste}"
+            x:Name="datagrid" ItemsSource="{Binding Artistes}">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Metier" Binding="{Binding Metier.LibelleMetier}" IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <Button Grid.Row="4" Grid.Column="1" x:Name="Insert" Content="Insert" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100px" FontWeight="Bold" FontSize="14" Click="Insert_Click"/>
+        <Button Grid.Row="4" Grid.Column="2" x:Name="Update" Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100px" FontWeight="Bold" FontSize="14" Click="Update_Click" />
+        <Button Grid.Row="4" Grid.Column="3" x:Name="Delete" Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100px" FontWeight="Bold" FontSize="14" Click="Remove_Click"/>
     </Grid>
 </UserControl>

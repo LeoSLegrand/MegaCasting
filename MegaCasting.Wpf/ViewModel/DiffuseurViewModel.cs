@@ -63,12 +63,21 @@ namespace MegaCasting.Wpf.ViewModel
         /// <param name="libelle"></param>
         public void AddDiffuseur()
         {
-            using (MegaCastingContext mg = new MegaCastingContext())
+            // Vérifie si le libellé du diffuseur est rempli
+            if (!string.IsNullOrWhiteSpace(NewDiffuseurName))
             {
-                Diffuseur newDifuseur = new() { LibelleDiffuseur = NewDiffuseurName };
-                mg.Add(newDifuseur);
-                mg.SaveChanges();
-                Diffuseurs.Add(newDifuseur);
+                using (MegaCastingContext mg = new MegaCastingContext())
+                {
+                    Diffuseur newDiffuseur = new Diffuseur { LibelleDiffuseur = NewDiffuseurName };
+                    mg.Add(newDiffuseur);
+                    mg.SaveChanges();
+                    Diffuseurs.Add(newDiffuseur);
+                }
+            }
+            else
+            {
+                // Affiche un message d'erreur si le libellé du diffuseur n'est pas rempli
+                MessageBox.Show("Veuillez remplir le libellé du diffuseur.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -77,23 +86,41 @@ namespace MegaCasting.Wpf.ViewModel
         /// </summary>
         public void UpdateDiffuseur()
         {
-            using (MegaCastingContext mg = new MegaCastingContext())
+            // Vérifie si un diffuseur est sélectionné
+            if (SelectedDiffuseur != null)
             {
-                mg.Update(SelectedDiffuseur);
-                mg.SaveChanges();
+                using (MegaCastingContext mg = new MegaCastingContext())
+                {
+                    mg.Update(SelectedDiffuseur);
+                    mg.SaveChanges();
+                }
+            }
+            else
+            {
+                // Affiche un message d'erreur si aucun diffuseur n'est sélectionné
+                MessageBox.Show("Veuillez sélectionner un diffuseur à mettre à jour.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
         /// <summary>
-        /// Mise à jour d'un diffuseur
+        /// Supprime un diffuseur
         /// </summary>
         public void RemoveDiffuseur()
         {
-            using (MegaCastingContext mg = new MegaCastingContext())
+            // Vérifie si un diffuseur est sélectionné
+            if (SelectedDiffuseur != null)
             {
-                mg.Remove(SelectedDiffuseur);
-                mg.SaveChanges();
-                Diffuseurs.Remove(SelectedDiffuseur);
+                using (MegaCastingContext mg = new MegaCastingContext())
+                {
+                    mg.Remove(SelectedDiffuseur);
+                    mg.SaveChanges();
+                    Diffuseurs.Remove(SelectedDiffuseur);
+                }
+            }
+            else
+            {
+                // Affiche un message d'erreur si aucun diffuseur n'est sélectionné
+                MessageBox.Show("Veuillez sélectionner un diffuseur à supprimer.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

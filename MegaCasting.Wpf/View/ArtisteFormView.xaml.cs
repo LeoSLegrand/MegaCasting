@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MegaCasting.Wpf.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,20 +24,11 @@ namespace MegaCasting.Wpf.View
         public ArtisteView()
         {
             InitializeComponent();
-
+            this.DataContext = new ArtisteListViewModel();
         }
 
-        public void clear()
-        {
-            name.Clear();
-            age.Clear();
-            gender.Clear();
-            city.Clear();
-        }
-
-        private void Clear_Click(object sender, RoutedEventArgs e)
-        {
-            clear();
-        }
+        private void Insert_Click(object sender, RoutedEventArgs e) => ((ArtisteListViewModel)this.DataContext).AddArtiste();
+        private void Update_Click(object sender, RoutedEventArgs e) => ((ArtisteListViewModel)this.DataContext).UpdateArtiste();
+        private void Remove_Click(object sender, RoutedEventArgs e) => ((ArtisteListViewModel)this.DataContext).RemoveArtiste();
     }
 }
