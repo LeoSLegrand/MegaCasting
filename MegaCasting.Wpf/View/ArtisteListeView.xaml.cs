@@ -14,16 +14,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace MegaCasting.Wpf.View
 {
     /// <summary>
-    /// Interaction logic for DiffuseurView.xaml
+    /// Vue pour afficher une liste d'artistes.
     /// </summary>
     public partial class ArtisteListView : UserControl
     {
+        /// <summary>
+        /// Initialise une nouvelle instance de la classe ArtisteListView.
+        /// </summary>
         public ArtisteListView()
         {
             InitializeComponent();
+            // Définit le contexte de données de cette vue sur une nouvelle instance de ArtisteListViewModel.
             this.DataContext = new ArtisteListViewModel();
         }
     }

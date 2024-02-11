@@ -19,42 +19,55 @@ namespace MegaCasting.Wpf.ViewModel
 {
     class DiffuseurViewModel : ObservableObject
     {
+        // Collection de diffuseurs
         private ObservableCollection<Diffuseur> _Diffuseurs;
 
+        /// <summary>
+        /// Obtient ou définit la collection de diffuseurs.
+        /// </summary>
         public ObservableCollection<Diffuseur> Diffuseurs
         {
             get { return _Diffuseurs; }
             set { SetProperty(nameof(Diffuseurs), ref _Diffuseurs, value); }
         }
 
-
+        // Nom du nouveau diffuseur
         private string _NewDiffuseurName;
 
+        /// <summary>
+        /// Obtient ou définit le nom du nouveau diffuseur.
+        /// </summary>
         public string NewDiffuseurName
         {
             get { return _NewDiffuseurName; }
             set { SetProperty(nameof(NewDiffuseurName), ref _NewDiffuseurName, value); }
         }
 
-
+        // Diffuseur sélectionné
         private Diffuseur _SelectedDiffuseur;
 
+        /// <summary>
+        /// Obtient ou définit le diffuseur sélectionné.
+        /// </summary>
         public Diffuseur SelectedDiffuseur
         {
             get { return _SelectedDiffuseur; }
-            set { SetProperty(nameof(SelectedDiffuseur), ref  _SelectedDiffuseur, value); }
+            set { SetProperty(nameof(SelectedDiffuseur), ref _SelectedDiffuseur, value); }
         }
 
-
+        /// <summary>
+        /// Initialise une nouvelle instance de la classe DiffuseurViewModel.
+        /// </summary>
         public DiffuseurViewModel()
         {
             using (MegaCastingContext mg = new MegaCastingContext())
             {
+                // Initialise la collection de diffuseurs avec les données de la base de données
                 Diffuseurs = new ObservableCollection<Diffuseur>(mg.Diffuseurs.ToList());
             }
-
-
         }
+    
+
 
 
         /// <summary>
@@ -123,8 +136,6 @@ namespace MegaCasting.Wpf.ViewModel
                 MessageBox.Show("Veuillez sélectionner un diffuseur à supprimer.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
-
 
         public void Refresh()
         {

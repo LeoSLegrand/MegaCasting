@@ -17,13 +17,17 @@ using System.Windows.Shapes;
 namespace MegaCasting.Wpf.View
 {
     /// <summary>
-    /// Interaction logic for OffreCastingListe.xaml
+    /// Vue pour afficher une liste d'offres de casting.
     /// </summary>
     public partial class OffreCastingListe : UserControl
     {
+        /// <summary>
+        /// Initialise une nouvelle instance de la classe OffreCastingListe.
+        /// </summary>
         public OffreCastingListe()
         {
             InitializeComponent();
+            // Définit le contexte de données de cette vue sur une nouvelle instance de OffreCastingViewModel.
             this.DataContext = new OffreCastingViewModel();
         }
     }

@@ -9,37 +9,56 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
+
 namespace MegaCasting.Wpf.ViewModel
 {
+    /// <summary>
+    /// ViewModel pour la gestion des artistes.
+    /// </summary>
     class ArtisteListViewModel : ObservableObject
     {
+        // Collection d'artistes
         private ObservableCollection<Artiste> _Artistes;
 
+        /// <summary>
+        /// Obtient ou définit la collection d'artistes.
+        /// </summary>
         public ObservableCollection<Artiste> Artistes
         {
             get { return _Artistes; }
             set { SetProperty(nameof(Artistes), ref _Artistes, value); }
         }
 
-        // Add a property to hold the collection of Metiers
+        // Collection de métiers
         private ObservableCollection<Metier> _Metiers;
 
+        /// <summary>
+        /// Obtient ou définit la collection de métiers.
+        /// </summary>
         public ObservableCollection<Metier> Metiers
         {
             get { return _Metiers; }
             set { SetProperty(nameof(Metiers), ref _Metiers, value); }
         }
 
+        // Métier sélectionné
         private Metier _SelectedMetier;
 
+        /// <summary>
+        /// Obtient ou définit le métier sélectionné.
+        /// </summary>
         public Metier SelectedMetier
         {
             get { return _SelectedMetier; }
             set { SetProperty(nameof(SelectedMetier), ref _SelectedMetier, value); }
         }
 
+        // Nom du nouvel artiste
         private string _NewArtisteName;
 
+        /// <summary>
+        /// Obtient ou définit le nom du nouvel artiste.
+        /// </summary>
         public string NewArtisteName
         {
             get { return _NewArtisteName; }
@@ -48,49 +67,57 @@ namespace MegaCasting.Wpf.ViewModel
 
 
 
-
         private string _NewArtisteAge;
 
+        /// <summary>
+        /// Obtient ou définit l'âge du nouvel artiste.
+        /// </summary>
         public string NewArtisteAge
         {
             get { return _NewArtisteAge; }
             set { SetProperty(nameof(NewArtisteAge), ref _NewArtisteAge, value); }
         }
 
-
-
         private string _NewArtistePrenom;
 
+        /// <summary>
+        /// Obtient ou définit le prénom du nouvel artiste.
+        /// </summary>
         public string NewArtistePrenom
         {
             get { return _NewArtistePrenom; }
             set { SetProperty(nameof(NewArtistePrenom), ref _NewArtistePrenom, value); }
         }
 
-
         private Artiste _SelectedArtiste;
 
+        /// <summary>
+        /// Obtient ou définit l'artiste sélectionné.
+        /// </summary>
         public Artiste SelectedArtiste
         {
             get { return _SelectedArtiste; }
             set { SetProperty(nameof(SelectedArtiste), ref _SelectedArtiste, value); }
         }
 
+        /// <summary>
+        /// Initialise une nouvelle instance de la classe ArtisteListViewModel.
+        /// </summary>
         public ArtisteListViewModel()
         {
             using (MegaCastingContext mg = new MegaCastingContext())
             {
+                // Initialise la collection d'artistes avec les données de la base de données
                 Artistes = new ObservableCollection<Artiste>(mg.Artistes.ToList());
 
-                // Populate the collection of Metiers
+                // Initialise la collection de métiers avec les données de la base de données
                 Metiers = new ObservableCollection<Metier>(mg.Metiers.ToList());
             }
         }
 
         /// <summary>
-        /// Ajoute un artiste
+        /// Méthode pour ajouter un nouvel artiste.
         /// </summary>
-        /// <param name="artiste"></param>
         public void AddArtiste()
         {
             using (MegaCastingContext mg = new MegaCastingContext())
@@ -138,7 +165,7 @@ namespace MegaCasting.Wpf.ViewModel
         }
 
         /// <summary>
-        /// Mise à jour d'un artiste
+        /// Méthode pour mettre à jour les informations d'un artiste.
         /// </summary>
         public void UpdateArtiste()
         {
@@ -159,7 +186,7 @@ namespace MegaCasting.Wpf.ViewModel
         }
 
         /// <summary>
-        /// Supprime un artiste
+        /// Méthode pour supprimer un artiste.
         /// </summary>
         public void RemoveArtiste()
         {

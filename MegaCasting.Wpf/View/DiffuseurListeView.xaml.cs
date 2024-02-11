@@ -17,13 +17,17 @@ using System.Windows.Shapes;
 namespace MegaCasting.Wpf.View
 {
     /// <summary>
-    /// Interaction logic for DiffuseurView.xaml
+    /// Vue pour afficher les informations d'un diffuseur.
     /// </summary>
     public partial class DiffuseurView : UserControl
     {
+        /// <summary>
+        /// Initialise une nouvelle instance de la classe DiffuseurView.
+        /// </summary>
         public DiffuseurView()
         {
             InitializeComponent();
+            // Définit le contexte de données de cette vue sur une nouvelle instance de DiffuseurViewModel.
             this.DataContext = new DiffuseurViewModel();
         }
     }
