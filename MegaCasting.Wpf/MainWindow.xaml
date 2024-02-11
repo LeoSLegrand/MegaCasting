@@ -128,7 +128,7 @@
                         FontSize="14" 
                         Height="50" 
                         Click="Button_Click_1">
-                    <!-- Style du bouton (similaire au précédent) -->
+                    <!-- Style du bouton -->
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Background">

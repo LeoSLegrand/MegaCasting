@@ -48,7 +48,7 @@ namespace MegaCasting.Wpf
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            // Ajoutez votre logique ici pour ouvrir la fenêtre d'inscription ou afficher la page d'inscription
+            // logique pour ouvrir la fenêtre d'inscription ou afficher la page d'inscription
         }
     }
 }
