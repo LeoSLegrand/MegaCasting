@@ -38,24 +38,25 @@
                 <ComboBox ItemsSource="{Binding Metiers}" DisplayMemberPath="LibelleMetier" SelectedItem="{Binding SelectedMetier}" Width="120"/>
             </StackPanel>
         </GroupBox>
-        
+
 
 
         <GroupBox Grid.Row="2" Grid.Column="1" Header="Modification d'un Artiste">
-            <StackPanel Orientation="Horizontal" >
+            <StackPanel Orientation="Horizontal">
                 <Label Content="Nom" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" />
-                <TextBox   Text="{Binding SelectedArtiste.NomArtiste}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox Text="{Binding SelectedArtiste.Nom, Mode=TwoWay}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
                 <Label Content="Prenom" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" />
-                <TextBox   Text="{Binding SelectedArtiste.AgeArtiste}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox Text="{Binding SelectedArtiste.Prenom, Mode=TwoWay}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
                 <Label Content="Age" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" />
-                <TextBox   Text="{Binding SelectedArtiste.GenderArtiste}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox Text="{Binding SelectedArtiste.Age, Mode=TwoWay}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
                 <Label Content="Metier" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" />
-                <ComboBox ItemsSource="{Binding Metiers}" DisplayMemberPath="LibelleMetier" SelectedItem="{Binding SelectedMetier}" Width="120"/>
+                <ComboBox ItemsSource="{Binding Metiers}" DisplayMemberPath="LibelleMetier" SelectedItem="{Binding SelectedArtiste.Metier, Mode=TwoWay}" Width="120"/>
             </StackPanel>
         </GroupBox>
+
 
         <DataGrid 
             Grid.Row="1" Grid.Column="2"
