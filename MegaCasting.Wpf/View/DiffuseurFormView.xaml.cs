@@ -15,6 +15,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MegaCasting.Wpf.ViewModel;
+
+
+
+
+
 
 namespace MegaCasting.Wpf.View
 {
@@ -26,18 +32,13 @@ namespace MegaCasting.Wpf.View
         public DiffuseurFormView()
         {
             InitializeComponent();
+            this.DataContext = new DiffuseurViewModel();
         }
 
-        public void clear()
-        {
-            libelle.Clear();
-        }
+        private void Insert_Click(object sender, RoutedEventArgs e) => ((DiffuseurViewModel)this.DataContext).AddDiffuseur();
 
-        private void Clear_Click(object sender, RoutedEventArgs e)
-        {
-            clear();
-        }
-
+        private void Update_Click(object sender, RoutedEventArgs e) => ((DiffuseurViewModel)this.DataContext).UpdateDiffuseur();
+        private void Remove_Click(object sender, RoutedEventArgs e) => ((DiffuseurViewModel)this.DataContext).RemoveDiffuseur();
     }
 }
 

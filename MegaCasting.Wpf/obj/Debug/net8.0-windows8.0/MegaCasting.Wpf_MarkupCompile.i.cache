@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\leose\source\repos\MegaCasting\MegaCasting.Wpf\App.xaml
-11-1483909169
+91142621740
 
 161190904925
 2282109011587
-MainWindow.xaml;Styles\Styles.xaml;Theme\MenuBtnTheme.xaml;Theme\TextBoxTheme.xaml;View\AccueilView.xaml;View\ArtisteFormView.xaml;View\ArtisteListeView.xaml;View\DiffuseurFormView.xaml;View\DiffuseurListeView.xaml;View\OffreCastingFormView.xaml;View\OffreCastingListe.xaml;
+MainWindow.xaml;Styles\Styles.xaml;View\AccueilView.xaml;View\ArtisteFormView.xaml;View\ArtisteListeView.xaml;View\DiffuseurFormView.xaml;View\DiffuseurListeView.xaml;View\OffreCastingFormView.xaml;View\OffreCastingListe.xaml;
 
-False
+True
 
