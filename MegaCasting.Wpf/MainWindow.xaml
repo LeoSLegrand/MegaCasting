@@ -7,7 +7,7 @@
         xmlns:view="clr-namespace:MegaCasting.Wpf.View"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="601" Width="920"
+        Height="601" Width="1200"
 		ResizeMode="NoResize"
 		Background="Transparent"
         AllowsTransparency="True"
