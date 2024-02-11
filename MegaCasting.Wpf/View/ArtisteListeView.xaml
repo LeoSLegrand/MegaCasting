@@ -8,8 +8,15 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Label Content="Artiste" />
-        <DataGrid ItemsSource="{Binding Artistes}" >
-
+        <DataGrid ItemsSource="{Binding Artistes}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <!-- Define a DataGridTextColumn for the "Metier" property -->
+                <DataGridTextColumn Header="Metier" Binding="{Binding Metier.LibelleMetier}" IsReadOnly="True" />
+                <!-- Define other columns as needed -->
+                <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" />
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 </UserControl>
