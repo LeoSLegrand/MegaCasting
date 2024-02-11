@@ -53,7 +53,7 @@ namespace MegaCasting.Wpf.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MegaCasting.Wpf;V1.0.0.0;component/view/accueilview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MegaCasting.Wpf;component/view/accueilview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\AccueilView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
