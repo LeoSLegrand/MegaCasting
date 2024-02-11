@@ -14,60 +14,90 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+
 namespace MegaCasting.Wpf
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logique d'interaction pour MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e) //Liste Diffuseur
+        /// <summary>
+        /// Action déclenchée lors du clic sur le bouton "Liste Diffuseur"
+        /// </summary>
+        /// <param name="sender">L'objet qui a déclenché l'événement</param>
+        /// <param name="e">Les données de l'événement</param>
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Doc.Children.Clear();
             this.Doc.Children.Add(new DiffuseurView());
         }
 
         /// <summary>
-        /// Ajouter Artiste
+        /// Action déclenchée lors du clic sur le bouton "Ajouter Artiste"
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">L'objet qui a déclenché l'événement</param>
+        /// <param name="e">Les données de l'événement</param>
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.Doc.Children.Clear();
             this.Doc.Children.Add(new ArtisteView());
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e) //Liste Artiste
+        /// <summary>
+        /// Action déclenchée lors du clic sur le bouton "Liste Artiste"
+        /// </summary>
+        /// <param name="sender">L'objet qui a déclenché l'événement</param>
+        /// <param name="e">Les données de l'événement</param>
+        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             this.Doc.Children.Clear();
             this.Doc.Children.Add(new ArtisteListView());
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e) //Ajouter offre Casting
+        /// <summary>
+        /// Action déclenchée lors du clic sur le bouton "Ajouter offre Casting"
+        /// </summary>
+        /// <param name="sender">L'objet qui a déclenché l'événement</param>
+        /// <param name="e">Les données de l'événement</param>
+        private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             this.Doc.Children.Clear();
             this.Doc.Children.Add(new OffreCastingView());
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e) //Ajouter Diffuseur
+        /// <summary>
+        /// Action déclenchée lors du clic sur le bouton "Ajouter Diffuseur"
+        /// </summary>
+        /// <param name="sender">L'objet qui a déclenché l'événement</param>
+        /// <param name="e">Les données de l'événement</param>
+        private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             this.Doc.Children.Clear();
             this.Doc.Children.Add(new DiffuseurFormView());
         }
 
+        /// <summary>
+        /// Action déclenchée lors du clic sur le bouton "Liste Offre Casting"
+        /// </summary>
+        /// <param name="sender">L'objet qui a déclenché l'événement</param>
+        /// <param name="e">Les données de l'événement</param>
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
             this.Doc.Children.Clear();
             this.Doc.Children.Add(new OffreCastingListe());
         }
 
+        /// <summary>
+        /// Action déclenchée lors du clic sur le bouton "Fermer"
+        /// </summary>
+        /// <param name="sender">L'objet qui a déclenché l'événement</param>
+        /// <param name="e">Les données de l'événement</param>
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

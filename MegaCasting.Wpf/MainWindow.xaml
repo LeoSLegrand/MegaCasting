@@ -13,19 +13,22 @@
         AllowsTransparency="True"
         WindowStyle="None">
 
-    <Border Background="White"
-            CornerRadius="20">
+    <!-- Conteneur principal -->
+    <Border Background="White" CornerRadius="20">
         <Grid>
+            <!-- Définition des colonnes -->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
+            <!-- Définition des lignes -->
             <Grid.RowDefinitions>
                 <RowDefinition Height="75"></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
+            <!-- Titre de l'application -->
             <TextBlock Text="Application CRUD"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
@@ -33,12 +36,99 @@
                        FontSize="22"
                        Margin="20,0,0,0"/>
 
+            <!-- Boutons de navigation -->
             <StackPanel Grid.Row="1">
                 <Button Content="Ajouter Diffuseur"
-        Foreground="White"
-        FontSize="14"
-        Height="50"
-        Click="Button_Click_4">
+                        Foreground="White"
+                        FontSize="14"
+                        Height="50"
+                        Click="Button_Click_4">
+                    <!-- Style du bouton -->
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                        <GradientStop Color="#007ACC" Offset="0"/>
+                                        <GradientStop Color="#005192" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="border"
+                                                Background="{TemplateBinding Background}"
+                                                BorderBrush="White"
+                                                BorderThickness="2"
+                                                CornerRadius="25">
+                                            <ContentPresenter HorizontalAlignment="Center"
+                                                              VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#005192"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+
+                <Button Content="Liste Artiste" 
+                        Foreground="White" 
+                        FontSize="14" 
+                        Height="50" 
+                        Click="Button_Click_2">
+                    <!-- Style du bouton -->
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <!-- Définition du fond du bouton -->
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                        <GradientStop Color="#007ACC" Offset="0"/>
+                                        <GradientStop Color="#005192" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <!-- Définition du modèle du bouton -->
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <!-- Conteneur du contenu du bouton -->
+                                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="White"
+                                BorderThickness="2"
+                                CornerRadius="25">
+                                            <!-- Contenu du bouton -->
+                                            <ContentPresenter HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"/>
+                                        </Border>
+                                        <!-- Déclencheurs du modèle -->
+                                        <ControlTemplate.Triggers>
+                                            <!-- Déclencheur pour le survol de la souris -->
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#005192"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <Button Content="Ajouter Artiste" 
+                        Foreground="Azure" 
+                        FontSize="14" 
+                        Height="50" 
+                        Click="Button_Click_1">
+                    <!-- Style du bouton (similaire au précédent) -->
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Background">
@@ -58,7 +148,7 @@
                                 BorderThickness="2"
                                 CornerRadius="25">
                                             <ContentPresenter HorizontalAlignment="Center"
-                                              VerticalAlignment="Center"/>
+                                                VerticalAlignment="Center"/>
                                         </Border>
                                         <ControlTemplate.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
@@ -72,12 +162,12 @@
                     </Button.Style>
                 </Button>
 
-
-                <Button Content="Liste Artiste"
-        Foreground="White"
-        FontSize="14"
-        Height="50"
-        Click="Button_Click_2">
+                <Button Content="Liste Offre Casting" 
+                        Foreground="White" 
+                        FontSize="14" 
+                        Height="50" 
+                        Click="Button_Click_5">
+                    <!-- Style du bouton (similaire aux précédents) -->
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Background">
@@ -97,7 +187,7 @@
                                 BorderThickness="2"
                                 CornerRadius="25">
                                             <ContentPresenter HorizontalAlignment="Center"
-                                              VerticalAlignment="Center"/>
+                                                VerticalAlignment="Center"/>
                                         </Border>
                                         <ControlTemplate.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
@@ -111,87 +201,12 @@
                     </Button.Style>
                 </Button>
 
-                <Button Content="Ajouter Artiste"
-        Foreground="Azure"
-        FontSize="14"
-        Height="50"
-        Click="Button_Click_1">
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Setter Property="Background">
-                                <Setter.Value>
-                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                                        <GradientStop Color="#007ACC" Offset="0"/>
-                                        <GradientStop Color="#005192" Offset="1"/>
-                                    </LinearGradientBrush>
-                                </Setter.Value>
-                            </Setter>
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border x:Name="border"
-                                Background="{TemplateBinding Background}"
-                                BorderBrush="White"
-                                BorderThickness="2"
-                                CornerRadius="25">
-                                            <ContentPresenter HorizontalAlignment="Center"
-                                              VerticalAlignment="Center"/>
-                                        </Border>
-                                        <ControlTemplate.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter TargetName="border" Property="Background" Value="#005192"/>
-                                            </Trigger>
-                                        </ControlTemplate.Triggers>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </Button.Style>
-                </Button>
-
-                <Button Content="Liste Offre Casting"
-        Foreground="White"
-        FontSize="14"
-        Height="50"
-        Click="Button_Click_5">
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Setter Property="Background">
-                                <Setter.Value>
-                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                                        <GradientStop Color="#007ACC" Offset="0"/>
-                                        <GradientStop Color="#005192" Offset="1"/>
-                                    </LinearGradientBrush>
-                                </Setter.Value>
-                            </Setter>
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border x:Name="border"
-                                Background="{TemplateBinding Background}"
-                                BorderBrush="White"
-                                BorderThickness="2"
-                                CornerRadius="25">
-                                            <ContentPresenter HorizontalAlignment="Center"
-                                              VerticalAlignment="Center"/>
-                                        </Border>
-                                        <ControlTemplate.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter TargetName="border" Property="Background" Value="#005192"/>
-                                            </Trigger>
-                                        </ControlTemplate.Triggers>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </Button.Style>
-                </Button>
 
                 <!--<Button Content="Ajouter offre Casting"
-        Foreground="White"
-        FontSize="14"
-        Height="50"
-        Click="Button_Click_3">
+                            Foreground="White"
+                            FontSize="14"
+                            Height="50"
+                            Click="Button_Click_3">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Background">
@@ -225,12 +240,13 @@
                     </Button.Style>
                 </Button>-->
 
+                <!-- Bouton pour fermer la fenêtre -->
                 <Button Content="Fermer"
-        x:Name="CloseButton"
-        Foreground="White"
-        FontSize="14"
-        Height="50"
-        Click="CloseButton_Click">
+                        x:Name="CloseButton"
+                        Foreground="White"
+                        FontSize="14"
+                        Height="50"
+                        Click="CloseButton_Click">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Background">
@@ -245,12 +261,12 @@
                                 <Setter.Value>
                                     <ControlTemplate TargetType="Button">
                                         <Border x:Name="border"
-                                Background="{TemplateBinding Background}"
-                                BorderBrush="White"
-                                BorderThickness="2"
-                                CornerRadius="25">
+                                                Background="{TemplateBinding Background}"
+                                                BorderBrush="White"
+                                                BorderThickness="2"
+                                                CornerRadius="25">
                                             <ContentPresenter HorizontalAlignment="Center"
-                                              VerticalAlignment="Center"/>
+                                                              VerticalAlignment="Center"/>
                                         </Border>
                                         <ControlTemplate.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
@@ -263,15 +279,12 @@
                         </Style>
                     </Button.Style>
                 </Button>
-
-
             </StackPanel>
 
+            <!-- Contenu principal -->
             <DockPanel x:Name="Doc" Grid.Column="1" Grid.Row="1">
                 <view:AccueilView/>
             </DockPanel>
-
         </Grid>
-
     </Border>
 </Window>
