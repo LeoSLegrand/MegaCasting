@@ -39,6 +39,9 @@
     <Compile Update="View\ArtisteListeView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\ContratListe.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>

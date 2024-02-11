@@ -102,5 +102,18 @@ namespace MegaCasting.Wpf
         {
             this.Close();
         }
+
+
+        /// <summary>
+        /// Action déclenchée lors du clic sur le bouton "Liste Contrat"
+        /// </summary>
+        /// <param name="sender">L'objet qui a déclenché l'événement</param>
+        /// <param name="e">Les données de l'événement</param>
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+
+            this.Doc.Children.Clear();
+            this.Doc.Children.Add(new ContratListe());
+        }
     }
 }
